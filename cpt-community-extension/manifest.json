@@ -6,11 +6,6 @@
   "host_permissions": ["https://chatprostotak.ru/*"],
   "content_scripts": [
     {
-      "matches": ["https://chatprostotak.ru/*"],
-      "js": ["messages.js"],
-      "run_at": "document_idle"
-    },
-    {
       "matches": ["https://chatprostotak.ru/blogs/*"],
       "js": ["blogs.js"],
       "run_at": "document_idle"
