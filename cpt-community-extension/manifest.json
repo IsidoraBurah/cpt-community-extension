@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "CPT community extension",
+  "name": "CPT Community Extension",
   "version": "0.1.0",
   "description": "CPT Community Extension — это open-source плагин для сайта ЧПТ",
   "host_permissions": ["https://chatprostotak.ru/*"],
@@ -10,5 +10,10 @@
       "js": ["blogs.js"],
       "run_at": "document_idle"
     }
-  ]
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
 }
