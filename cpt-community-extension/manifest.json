@@ -3,17 +3,36 @@
   "name": "CPT Community Extension",
   "version": "0.1.0",
   "description": "CPT Community Extension — это open-source плагин для сайта ЧПТ",
+  "permissions": ["storage"],
   "host_permissions": ["https://chatprostotak.ru/*"],
   "content_scripts": [
+    {
+      "matches": ["https://chatprostotak.ru/*"],
+      "css": ["styles/modal.css"],
+      "js": ["storage.js", "utils.js", "modal.js"],
+      "run_at": "document_idle"
+    },
     {
       "matches": ["https://chatprostotak.ru/blogs/*"],
       "js": ["blogs.js"],
       "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://chatprostotak.ru/users/*"],
+      "css": ["styles/settings-table.css"],
+      "js": ["users-elements.js", "users.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "matches": ["https://chatprostotak.ru/*"],
+      "resources": ["picture/examples/*"]
     }
   ],
   "icons": {
-    "16": "icons/icon16.png",
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png"
+    "16": "picture/icons/icon16.png",
+    "48": "picture/icons/icon48.png",
+    "128": "picture/icons/icon128.png"
   }
 }

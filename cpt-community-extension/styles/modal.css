@@ -1,0 +1,44 @@
+#cptce_modal_backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, .35);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+}
+
+#cptce_modal {
+  width: min(900px, calc(100vw - 24px));
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
+  padding: 16px;
+}
+
+#cptce_modal h5 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+}
+
+#cptce_modal .cptce-modal-text {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+}
+
+#cptce_modal .cptce-modal-image {
+  display: block;
+  max-width: 100%;
+  max-height: 70vh;
+  margin: 12px 0;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+#cptce_modal .cptce-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
