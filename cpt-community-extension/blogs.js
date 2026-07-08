@@ -264,7 +264,10 @@ function collapseMessages(root = document) {
     }
 }
 
-(function initBlogsPage() {
-  collapseMessages(document);
+(async function initBlogsPage() {
+  const settings = await loadSettings();
+  if(settings.collapseMessages === true) {
+    collapseMessages(document);
+  }
 })();
 
